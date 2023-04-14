@@ -24,6 +24,7 @@ function PortfolioCardItem({ title, imgUrl, stack, link, client_side_code, serve
                 </p>
             </div>
             <h3 className="text-lg md:text-sm dark:text-white ms-4 mb-2 md:mb-3 font-semibold ">{client_side_code}</h3>
+            <h3 className="text-lg md:text-sm dark:text-white ms-4 mb-2 md:mb-3 font-semibold ">{server_side_code}</h3>
         </a>
     )
 }
