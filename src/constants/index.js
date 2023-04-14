@@ -1,15 +1,15 @@
 
-import javascript from '../../public/assets/javascript.png';
-import html from '../../public/assets/html.png';
-import css from '../../public/assets/css.png';
-import reactjs from '../../public/assets/reactjs.png';
-import tailwind from '../../public/assets/tailwind.png';
-import nodejs from '../../public/assets/nodejs.png';
-import mongodb from '../../public/assets/mongodb.png';
-import git from '../../public/assets/git.png';
-import figma from '../../public/assets/figma.png';
-import bootstrap from '../../public/assets/bootstrap.png';
-import cpp from '../../public/assets/cpp.png';
+import javascript from '../assets/javascript.png';
+import html from '../assets/html.png';
+import css from '../assets/css.png';
+import reactjs from '../assets/reactjs.png';
+import tailwind from '../assets/tailwind.png';
+import nodejs from '../assets/nodejs.png';
+import mongodb from '../assets/mongodb.png';
+import git from '../assets/git.png';
+import figma from '../assets/figma.png';
+import bootstrap from '../assets/bootstrap.png';
+import cpp from '../assets/cpp.png';
 
 const technologies = [
     {
