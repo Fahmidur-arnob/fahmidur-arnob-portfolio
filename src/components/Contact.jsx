@@ -1,11 +1,69 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from "@emailjs/browser";
 import Title from './Title';
 
 function Contact() {
+    const formRef = useRef();
+    const [form, setForm] = useState({
+        name: "",
+        email: "",
+        message: "",
+    });
+    const [loading, setLoading] = useState(false);
+
+    const handleChange = (e) => {
+        const { target } = e;
+        const { name, value } = target;
+
+        setForm({
+            ...form,
+            [name]: value,
+        });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setLoading(true);
+
+        emailjs
+            .send(
+                'service_upq8a5u',
+                'template_gvtdky5',
+                {
+                    from_name: form.name,
+                    to_name: "Md Fahmidur Rahman Arnob",
+                    from_email: form.email,
+                    to_email: "arnobdev93@gmail.com",
+                    message: form.message,
+                },
+                'rW4OxoyP7tkSYwTJh'
+            )
+            .then(
+                () => {
+                    setLoading(false);
+                    alert("Thank you. I will get back to you as soon as possible.");
+
+                    setForm({
+                        name: "",
+                        email: "",
+                        message: "",
+                    });
+                },
+                (error) => {
+                    setLoading(false);
+                    console.error(error);
+
+                    alert("Ahh, something went wrong. Please try again.");
+                }
+            );
+    };
+
     return (
         <div className="flex flex-col mb-10 mx-auto">
             <div className="flex justify-center items-center">
                 <form
+                    ref={formRef}
+                    onSubmit={handleSubmit}
                     action="https://getform.io/f/(customSlugHere)"
                     method="POST"
                     className="flex flex-col w-full md:w-7/12"
@@ -30,10 +88,10 @@ function Contact() {
                         className="p-2 mb-4 bg-transparent border-2 rounded-md focus:outline-none"
                     />
                     <button
-                        type="button"
+                        type="submit"
                         className="text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-yellow-500 to-pink-500 drop-shadow-md hover:stroke-white"
                     >
-                        send
+                        {loading ? "Sending..." : "Send"}
                     </button>
                 </form>
             </div>
