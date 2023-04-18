@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PortfolioCardItem({ title, imgUrl, stack, link, client_side_code, server_side_code }) {
+function PortfolioCardItem({ title, img_url, stack, link, client_side_code, server_side_code }) {
     return (
         <a
             href={link}
