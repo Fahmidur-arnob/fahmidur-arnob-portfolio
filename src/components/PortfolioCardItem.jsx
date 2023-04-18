@@ -9,7 +9,7 @@ function PortfolioCardItem({ title, img_url, stack, link, client_side_code, serv
             className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden"
         >
             <img
-                src={imgUrl}
+                src={img_url}
                 alt="portfolio"
                 className="w-full h-36 md:h-48 object-cover cursor-pointer"
             />
