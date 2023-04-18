@@ -23,10 +23,10 @@ export default [
         link: 'https://serene-capybara-73633d.netlify.app/',
     },
     {
-        title: 'Country Guide App',
-        imgUrl: '../../public/assets/cguideapp.png',
-        stack: ['HTML5', 'CSS3', 'Javascript'],
-        client_side_code: 'https ://github.com/Fahmidur-arnob/country_guide_app_api',
-        link: 'https://fahmidur-arnob/github.io/country_guide_app_api/',
+        title: 'Online Shopping App',
+        imgUrl: '../../public/assets/shopping.png',
+        stack: ['HTML5', 'TailwindCSS', 'ReactJs',],
+        client_side_code: 'https://github.com/Fahmidur-arnob/Shopping_App',
+        link: 'https://nimble-queijadas-039f8b.netlify.app/',
     },
 ]
